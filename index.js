@@ -8,8 +8,9 @@ function gameStart() {
   currentElement = 0;  // game starts by clicking on first element of array
   level++; //level increments
   $("h1").text("Level " + level); // update heading to display current level
-  var random = Math.floor(Math.random() * 4);
-  clickEnabled = false;
+  var random = Math.floor(Math.random() * 4);  // math.random generates a value between 0 and less than 1 // math.floor takes lower value
+                                                // we get values between 0 and 3
+  clickEnabled = false;    // no click during sequence display 
   //this switch checks the random generated and every number has a tile assigned which is pushed to the colorSequence
   switch (random) {
     case 0:

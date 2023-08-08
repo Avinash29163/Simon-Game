@@ -1,13 +1,13 @@
 var colorSequence = []; //array for storing the sequence of buttons to be pressed
-var clickEnabled = true;
-var level = 0;
-var currentElement = 0;
-var gameOver = false;
+var clickEnabled = true;  // used to control when the user is allowed to click
+var level = 0;     // current game level
+var currentElement = 0;  // index of current button in array 
+var gameOver = false;    // used to determine whether the game is over 
 
 function gameStart() {
-  currentElement = 0;
+  currentElement = 0;  // game starts by clicking on first element of array
   level++; //level increments
-  $("h1").text("Level " + level);
+  $("h1").text("Level " + level); // update heading to display current level
   var random = Math.floor(Math.random() * 4);
   clickEnabled = false;
   //this switch checks the random generated and every number has a tile assigned which is pushed to the colorSequence

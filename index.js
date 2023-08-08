@@ -13,7 +13,7 @@ function gameStart() {
   clickEnabled = false;    // no click during sequence display 
   //this switch checks the random generated and every number has a tile assigned which is pushed to the colorSequence
   switch (random) {
-    case 0:
+    case 0:    // based on the no assign a color to the array 
       colorSequence.push("blue");
       animateButtons("blue");
       addSound("blue");
@@ -37,7 +37,7 @@ function gameStart() {
 }
 //this function adds the sound according to the button which is the argument taken in
 function addSound(btn) {
-  var audio = new Audio("sounds/" + btn + ".mp3");
+  var audio = new Audio("sounds/" + btn + ".mp3");  // assign variable audio an object of Audio class and takes the btn pressed as parameter to create path to audio
   audio.play();
 }
 //any key pressed will start the game

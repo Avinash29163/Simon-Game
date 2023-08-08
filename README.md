@@ -1,4 +1,5 @@
 # Simon-Game
+https://simon-game-avi.netlify.app/
 This is an application of the classic memory game simon. The implementation of the game is as follows:
 1. **HTML Structure:**
    - Your HTML file sets up the basic structure of the game's user interface.

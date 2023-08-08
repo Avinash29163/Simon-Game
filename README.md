@@ -32,6 +32,13 @@ This is an application of the classic memory game simon. The implementation of t
 8. **CSS Styles:**
    - The `styles.css` file contains styles that control the visual appearance of the game interface and animations.
    - The "pressed" class likely defines a temporary visual effect defined in CSS to indicate a button press.
+9. **Google Fonts:**
+   - The Google Fonts stylesheet is linked to provide the "Press Start 2P" font for a retro gaming feel.
+10. **jQuery:**
+    - The game heavily relies on the jQuery library for event handling, DOM manipulation, and animations.
+
+11. **Debugging and Testing:**
+    - Console log statements and browser developer tools can help diagnose issues and monitor variable states.
 
 
 

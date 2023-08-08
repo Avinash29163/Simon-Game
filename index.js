@@ -1,3 +1,6 @@
+// uses jquery (javascript library )to trigger event handler on key pressing 
+
+
 var colorSequence = []; //array for storing the sequence of buttons to be pressed
 var clickEnabled = true;  // used to control when the user is allowed to click
 var level = 0;     // current game level
@@ -41,11 +44,11 @@ function addSound(btn) {
   audio.play();
 }
 //any key pressed will start the game
-$("body").keydown(function() {
+$("body").keydown(function() {  // sets up jquery eventlistener for keydown--performs function when key is pressed
   if (clickEnabled === true) { //this is a boolean to ensure that game starts once and not everytime there is a keypress
     gameStart();
   }
-  if (gameOver === true) {
+  if (gameOver === true) {  //resets the game 
     colorSequence = [];
     clickEnabled = true;
     level = 0;
@@ -65,10 +68,11 @@ $(".btn").click(function(event) {
     gameOver = true;
     $("body").addClass("game-over");
     $("h1").text("Game Over, Press any key to restart");
-    setTimeout(function() {
+    setTimeout(function() { //timeout resets the styling
       $("body").removeClass("game-over");
     }, 100)
-  } else if (this.id === colorSequence[currentElement]) { //if this was the button to be pressed
+  } 
+  else if (this.id === colorSequence[currentElement]) { //if this was the button to be pressed
     addSound(this.id);
     animateButtons(this.id);
     currentElement++;
@@ -85,9 +89,9 @@ $(".btn").click(function(event) {
 
 //adds the pressed animation to the buttons
 function animateButtons(color) {
-  $("." + color).addClass("pressed");
+  $("." + color).addClass("pressed"); //jquery to add pressed animation
 
-  setTimeout(function() {
+  setTimeout(function() {  //revert the animation using timeout
     $("." + color).removeClass("pressed");
   }, 100)
 }
